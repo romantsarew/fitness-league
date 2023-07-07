@@ -1,0 +1,26 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.header__logo {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.header__contact {
+  color: #ffffff;
+  font-family: $ff-alumni;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.78px;
+}
