@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .header__logo {
@@ -15,6 +15,24 @@
   display: flex;
   align-items: center;
   padding: 10px 5px;
+
+  &:hover {
+    @include hover;
+    outline: 2px solid #ffffff;
+    outline-offset: 5px;
+  }
+
+  &:focus {
+    @include focus;
+    background-color: #ffffff;
+    color: #103aae;
+  }
+
+  &:active {
+    @include active;
+    background-color: #ffffff;
+    color: #102654;
+  }
 }
 
 .header__contact {
@@ -24,11 +42,30 @@
   font-weight: 600;
   letter-spacing: 0.78px;
   line-height: 31px;
+  padding: 10px;
+
+  &:hover {
+    @include hover;
+    outline: 2px solid #ffffff;
+    outline-offset: 5px;
+  }
+
+  &:focus {
+    @include focus;
+    background-color: #ffffff;
+    color: #103aae;
+  }
+
+  &:active {
+    @include active;
+    background-color: #ffffff;
+    color: #102654;
+  }
 }
 
 @media (max-width: $tablet-width) {
   .header__container {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   .header__logo svg{
@@ -46,7 +83,7 @@
 
 @media (max-width: $mobile-width) {
   .header__container {
-    padding-top: 15px;
+    padding-top: 5px;
   }
 
   .header__logo svg{

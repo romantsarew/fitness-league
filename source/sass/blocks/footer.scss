@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   min-height: 108px;
-  background-color: #030A1A;
+  background-color: #030a1a;
 }
 
 .footer__container {
@@ -19,6 +19,24 @@
   padding: 10px;
   color: #ffffff;
   cursor: pointer;
+
+  &:hover {
+    @include hover;
+    outline: 2px solid #ffffff;
+    outline-offset: 5px;
+  }
+
+  &:focus {
+    @include focus;
+    background-color: #ffffff;
+    color: #103aae;
+  }
+
+  &:active {
+    @include active;
+    background-color: #ffffff;
+    color: #102654;
+  }
 }
 
 .footer__nav-list {
@@ -27,7 +45,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 40px;
+  gap: 20px;
   max-width: 450px;
 }
 
@@ -36,8 +54,23 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  padding: 5px 0;
+  padding: 5px 10px;
   cursor: pointer;
+
+  &:hover {
+    @include hover;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  &:focus {
+    @include focus;
+    border: 1px solid #ffffff;
+  }
+
+  &:active {
+    @include active;
+    border: none;
+  }
 }
 
 .footer__nav-social {
@@ -52,10 +85,6 @@
 }
 
 .footer__nav-social-item {
-  background-color: #fff;
-  border-radius: 50%;
-  min-height: 25px;
-  width: 25px;
   display: flex;
   align-items: center;
 }
@@ -66,13 +95,42 @@
   width: 100%;
   height: 100%;
   padding: 10px 12px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    top: -3px;
+    left: 0;
+  }
+
+  &:hover svg,
+  &:focus svg,
+  &:active svg {
+    @include hover;
+    color: #ffffff;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    @include hover;
+    background-color: #103aae;
+  }
+
+  &:active::before {
+    @include active;
+    background-color: #102654;
+  }
 }
 
 .footer__nav-social-link svg {
   position: absolute;
   top: 3px;
   left: 5px;
-  color: #030A1A;
+  color: #030a1a;
 }
 
 .footer__nav-social-text {
@@ -95,14 +153,14 @@
     cursor: pointer;
   }
 
-  .footer__logo svg{
+  .footer__logo svg {
     width: 82px;
     height: 18px;
   }
 
   .footer__nav-list {
-    gap: 30px;
-    max-width: 392px;
+    gap: 10px;
+    max-width: 410px;
   }
 }
 
@@ -131,7 +189,7 @@
     cursor: pointer;
   }
 
-  .footer__logo svg{
+  .footer__logo svg {
     width: 68px;
     height: 15px;
   }

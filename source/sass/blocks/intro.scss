@@ -86,6 +86,20 @@
   line-height: 14px;
   max-width: 230px;
   align-self: end;
+
+  &:hover,
+  &:focus {
+    @include hover;
+    @include focus;
+    background-color: #ffffff;
+    color: #103aae;
+  }
+
+  &:active {
+    @include active;
+    background-color: #ffffff;
+    color: #102654;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -167,7 +181,6 @@
     width: 100%;
     margin-left: 0;
   }
-
 
   .intro__city {
     font-size: 28px;

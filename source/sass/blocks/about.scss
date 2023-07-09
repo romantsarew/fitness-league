@@ -1,0 +1,243 @@
+.about__container {
+  padding: 120px 0 235px;
+  position: relative;
+  display: flex;
+  gap: 85px;
+}
+
+.about__text-container {
+  max-width: 405px;
+  color: #102654;
+  padding-left: 60px;
+}
+
+.about__title {
+  font-family: $ff-alumni;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 3%;
+}
+
+.about__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.about__text--invisible {
+  margin: 0;
+}
+
+.about__container img {
+  object-fit: cover;
+}
+
+.about__video {
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  top: 408px;
+  left: 428px;
+  background-image: url("../../img/about-video-wall.jpg");
+  z-index: 15;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 364px;
+    height: 228px;
+    background-image: url("../../img/about-video-wall.jpg");
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 364px;
+    height: 228px;
+    top: 0px;
+    left: 0;
+    background-color: rgba(20, 54, 122, 0.5);
+    z-index: 2;
+  }
+}
+
+.about__video iframe {
+  position: absolute;
+  z-index: 2;
+}
+
+@media (max-width: $tablet-width) {
+  .about__container {
+    padding: 100px 0 183px;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .about__text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+    align-self: center;
+    padding: 0;
+    max-width: 502px;
+  }
+
+  .about__title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 6px;
+    letter-spacing: 1.26px;
+  }
+
+  .about__description {
+    margin-bottom: 50px;
+  }
+
+  .about__image-container {
+    position: relative;
+    width: 100%;
+    min-height: 345px;
+  }
+
+  .about__text {
+    margin: 0;
+  }
+
+  .about__text--invisible {
+    display: none;
+  }
+
+  .about__container img {
+    width: 100%;
+    height: 345px;
+  }
+
+  .about__video {
+    width: 266px;
+    height: 167px;
+    top: 587px;
+    left: calc(50% - 167px);
+    background-image: url("../../img/about-video-wall.jpg");
+    z-index: 15;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 364px;
+      height: 228px;
+      background-image: url("../../img/about-video-wall.jpg");
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 364px;
+      height: 228px;
+      top: 0px;
+      left: 0;
+      background-color: rgba(20, 54, 122, 0.5);
+      z-index: 2;
+    }
+  }
+
+  .about__video iframe {
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about__container {
+    padding: 70px 0 70px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about__text-container {
+    text-align: start;
+    align-self: center;
+    max-width: 100%;
+  }
+
+  .about__title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    letter-spacing: 0.96px;
+  }
+
+  .about__description {
+    margin-bottom: 40px;
+  }
+
+  .about__text {
+    max-width: 258px;
+  }
+
+  .about__image-container {
+    position: relative;
+    width: calc(100% + 30px);
+    padding-top: 100%;
+    margin-left: -15px;
+  }
+
+  .about__image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  .about__video {
+    position: relative;
+    width: calc(100% + 30px);
+    min-height: 167px;
+    top: 0;
+    left: -15px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 167px;
+      background-image: url("../../img/about-video-wall.jpg");
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 167px;
+      top: 0px;
+      left: 0;
+      background-color: rgba(20, 54, 122, 0.5);
+      z-index: 2;
+    }
+  }
+
+  .about__video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+}
+
