@@ -1,5 +1,16 @@
+.swiper .swiper__slider-wrapper {
+  max-width: 100%;
+}
+
 .swiper__slide-container {
-  min-height: 290px;
+  & img {
+    object-fit: cover;
+    min-height: 100%;
+    width: 100%;
+  }
+}
+
+.swiper__slide-picture {
   position: relative;
 
   & p {
@@ -9,21 +20,35 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
-    bottom: 16px;
+    bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: fit-content;
-  }
-
-  & img {
-    object-fit: cover;
-    min-height: 100%;
+    width: 100%;
+    text-align: center;
   }
 }
 
 .swiper .swiper__slide {
-  min-height: 294px;
-  width: 260px;
+  &:hover picture::after,
+  &:focus picture::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(16, 38, 84, 0.89);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:hover p,
+  &:focus p {
+    top: 58px;
+  }
+
+  &:hover .swiper__text,
+  &:focus .swiper__text {
+    display: flex;
+  }
 }
 
 .swiper__text {
@@ -31,8 +56,9 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 81px;
+  left: 50%;
+  transform: translate(-50%, 0);
   color: $color-default-white;
 
   & span {
@@ -48,36 +74,140 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  padding-left: 55px;
   margin: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  max-width: 215px;
-  gap: 24px;
+  width: 160px;
+  gap: 13px;
+  padding-left: 16px;
 }
 
-.swiper .swiper__button {
+.swiper__button {
   position: absolute;
   content: "";
-  width: 16px;
-  height: 100%;
-  top: 20px;
-}
+  width: 56px;
+  height: 56px;
+  bottom: 35%;
+  transform: translate(0, -35%);
+  border: none;
+  background-color: transparent;
+  z-index: 5;
 
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
-  display: none;
+  &:hover,
+  &:focus {
+    outline: 1px solid #102654;
+    border-radius: 50%;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: #102654;
+  }
+
+  &:active {
+    background-color: #102654;
+  }
+
+  &:active svg {
+    color: $color-default-white;
+  }
+
+  &:disabled svg {
+    color: rgba(16, 38, 84, 0.3);
+  }
 }
 
 .swiper__button svg {
+  position: absolute;
+  top: 12px;
+  left: 18px;
   color: #afafaf;
 }
 
-.swiper .swiper__button--prev {
-  left: -40px;
+.swiper__button--prev {
+  left: -70px;
 }
 
-.swiper .swiper__button--next {
-  right: -40px;
+.swiper__button--next {
+  right: -70px;
+}
+
+.swiper__button--next svg {
+  transform: rotate(180deg);
+  left: 22px;
+}
+
+@media screen and (max-width: $tablet-width) {
+  .swiper {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+
+  .swiper__slide-container {
+    & img {
+      min-width: 268px;
+      object-fit: cover;
+    }
+  }
+
+  .swiper__button--prev {
+    left: -10px;
+  }
+
+  .swiper__button--next {
+    right: -10px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .swiper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .swiper .swiper__slide {
+    &:hover p,
+    &:focus p {
+      top: 48px;
+    }
+  }
+
+  .swiper__slide-container {
+    & img {
+      min-height: 274px;
+      min-width: 226px;
+    }
+  }
+
+  .swiper__text {
+    top: 71px;
+  }
+
+  .swiper__button {
+    width: 30px;
+    height: 30px;
+    bottom: 40%;
+    transform: translate(0, -40%);
+  }
+
+  .swiper__button svg {
+    width: 10px;
+    height: 19px;
+    top: 6px;
+    left: 8px;
+  }
+
+  .swiper__button--prev {
+    left: 0;
+  }
+
+  .swiper__button--next {
+    right: 0;
+  }
+
+  .swiper__button--next svg {
+    transform: rotate(180deg);
+    left: 12px;
+  }
 }

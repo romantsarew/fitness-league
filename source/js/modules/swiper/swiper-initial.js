@@ -1,19 +1,31 @@
 function swiperTurnOn() {
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 4,
-    spaceBetween: 40,
+    initialSlide: 0,
     cssMode: true,
     direction: 'horizontal',
     loop: true,
-
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+    breakpoints: {
+      // when window width is >= 1200px
+      1199: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        initialSlide: 2,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper__button--next',
+      prevEl: '.swiper__button--prev',
     },
   });
 
