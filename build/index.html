@@ -8,7 +8,6 @@
   <meta name="description"
     content="самый большой фитнес центр за Уралом. Тренажерный зал, персональный тренер, кроссфит, кардио-зона, кардио, здоровье, групповые занятия, качалка.">
   <title>fitness-league</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous" type="font/woff2">
   <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous" type="font/woff2">
@@ -223,16 +222,33 @@
         <div class="container">
           <div class="trainers__container">
             <h2 class="trainers__title">Тренеры</h2>
+            <div class="trainers__buttons">
+              <button class="swiper__button swiper__button--prev" type="button">
+                <svg width="18" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="предыдущий слайд.">
+                  <use href="img/sprite/sprite.svg#swiper-button"></use>
+                </svg>
+              </button>
+              <button class="swiper__button swiper__button--next" type="button">
+                <svg width="18" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                  aria-label="предыдущий слайд.">
+                  <use href="img/sprite/sprite.svg#swiper-button"></use>
+                </svg>
+              </button>
+            </div>
             <div class="trainers__slider swiper">
               <div class="swiper__slider-wrapper swiper-wrapper">
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-pavlova.webp 1x, img/trainers-pavlova@2x.webp 2x">
-                      <img src="img/trainers-pavlova.jpg" srcset="img/trainers-pavlova@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Анна Павлова</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp"
+                          srcset="img/trainers-pavlova.webp 1x, img/trainers-pavlova@2x.webp 2x">
+                        <img src="img/trainers-pavlova.jpg" srcset="img/trainers-pavlova@2x.jpg" width="260"
+                          height="294" alt="">
+                      </picture>
+                      <p>Анна Павлова</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -245,12 +261,14 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-lavrov.webp 1x, img/trainers-lavrov@2x.webp 2x">
-                      <img src="img/trainers-lavrov.jpg" srcset="img/trainers-lavrov@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Алексей Лавров</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp" srcset="img/trainers-lavrov.webp 1x, img/trainers-lavrov@2x.webp 2x">
+                        <img src="img/trainers-lavrov.jpg" srcset="img/trainers-lavrov@2x.jpg" width="260" height="294"
+                          alt="">
+                      </picture>
+                      <p>Алексей Лавров</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -263,12 +281,15 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-pashkov.webp 1x, img/trainers-pashkov@2x.webp 2x">
-                      <img src="img/trainers-pashkov.jpg" srcset="img/trainers-pashkov@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Александр Пашков</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp"
+                          srcset="img/trainers-pashkov.webp 1x, img/trainers-pashkov@2x.webp 2x">
+                        <img src="img/trainers-pashkov.jpg" srcset="img/trainers-pashkov@2x.jpg" width="260"
+                          height="294" alt="">
+                      </picture>
+                      <p>Александр Пашков</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -281,12 +302,14 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-ketova.webp 1x, img/trainers-ketova@2x.webp 2x">
-                      <img src="img/trainers-ketova.jpg" srcset="img/trainers-ketova@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Мария Кетова</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp" srcset="img/trainers-ketova.webp 1x, img/trainers-ketova@2x.webp 2x">
+                        <img src="img/trainers-ketova.jpg" srcset="img/trainers-ketova@2x.jpg" width="260" height="294"
+                          alt="">
+                      </picture>
+                      <p>Мария Кетова</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -299,12 +322,15 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-pavlova.webp 1x, img/trainers-pavlova@2x.webp 2x">
-                      <img src="img/trainers-pavlova.jpg" srcset="img/trainers-pavlova@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Анна Павлова</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp"
+                          srcset="img/trainers-pavlova.webp 1x, img/trainers-pavlova@2x.webp 2x">
+                        <img src="img/trainers-pavlova.jpg" srcset="img/trainers-pavlova@2x.jpg" width="260"
+                          height="294" alt="">
+                      </picture>
+                      <p>Анна Павлова</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -317,12 +343,14 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-ketova.webp 1x, img/trainers-ketova@2x.webp 2x">
-                      <img src="img/trainers-ketova.jpg" srcset="img/trainers-ketova@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Мария Кетова</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp" srcset="img/trainers-ketova.webp 1x, img/trainers-ketova@2x.webp 2x">
+                        <img src="img/trainers-ketova.jpg" srcset="img/trainers-ketova@2x.jpg" width="260" height="294"
+                          alt="">
+                      </picture>
+                      <p>Мария Кетова</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -335,12 +363,14 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-lavrov.webp 1x, img/trainers-lavrov@2x.webp 2x">
-                      <img src="img/trainers-lavrov.jpg" srcset="img/trainers-lavrov@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Алексей Лавров</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp" srcset="img/trainers-lavrov.webp 1x, img/trainers-lavrov@2x.webp 2x">
+                        <img src="img/trainers-lavrov.jpg" srcset="img/trainers-lavrov@2x.jpg" width="260" height="294"
+                          alt="">
+                      </picture>
+                      <p>Алексей Лавров</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -353,12 +383,14 @@
                 </div>
                 <div class="swiper__slide swiper-slide">
                   <div class="swiper__slide-container">
-                    <picture>
-                      <source type="image/webp" srcset="img/trainers-ketova.webp 1x, img/trainers-ketova@2x.webp 2x">
-                      <img src="img/trainers-ketova.jpg" srcset="img/trainers-ketova@2x.jpg" width="260" height="294"
-                        alt="">
-                    </picture>
-                    <p>Мария Кетова</p>
+                    <div class="swiper__slide-picture">
+                      <picture>
+                        <source type="image/webp" srcset="img/trainers-ketova.webp 1x, img/trainers-ketova@2x.webp 2x">
+                        <img src="img/trainers-ketova.jpg" srcset="img/trainers-ketova@2x.jpg" width="260" height="294"
+                          alt="">
+                      </picture>
+                      <p>Мария Кетова</p>
+                    </div>
                     <div class="swiper__text">
                       <span>CrossFit</span>
                       <ul class="swiper__text-advantages">
@@ -369,18 +401,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper__button swiper__button--prev swiper-button-prev">
-                <svg width="18" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-label="предыдущий слайд.">
-                  <use href="img/sprite/sprite.svg#swiper-button"></use>
-                </svg>
-              </div>
-              <div class="swiper__button swiper__button--next swiper-button-next">
-                <svg width="18" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-                  aria-label="предыдущий слайд.">
-                  <use href="img/sprite/sprite.svg#swiper-button"></use>
-                </svg>
               </div>
             </div>
           </div>
@@ -492,7 +512,6 @@
       </div>
     </div>
   </div>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
