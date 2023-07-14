@@ -4,6 +4,8 @@
 @import "vendor/normalize";
 @import "vendor/data-tabs";
 @import "vendor/swiper.scss";
+@import "vendor/data-accordion";
+
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -36,7 +38,8 @@
 @import "blocks/trainers";
 @import "blocks/swiper";
 @import "blocks/advantages";
-@import "blocks/promotions"; // ---------------------------------
+@import "blocks/promotions";
+@import "blocks/faq" // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
 
