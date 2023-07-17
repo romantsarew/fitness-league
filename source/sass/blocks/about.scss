@@ -6,9 +6,10 @@
 }
 
 .about__text-container {
-  max-width: 405px;
-  color: $color-sapphire;
+  max-width: 415px;
+  color: #102654;
   padding-left: 60px;
+  margin-top: 39px;
 }
 
 .about__title {
@@ -16,22 +17,21 @@
   font-size: 48px;
   line-height: 58px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 7px;
   font-weight: 600;
-  letter-spacing: 3%;
+  letter-spacing: 1.44px;
 }
 
 .about__description {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin: 0;
-  margin-bottom: 55px;
 }
 
 .about__text {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
+  margin-top: 38px;
 }
 
 .about__text--invisible {
@@ -45,10 +45,17 @@
 .about__video {
   position: absolute;
   width: 364px;
-  height: 0;
+  min-height: 228px;
   top: 408px;
-  left: 428px;
-  padding-bottom: 19.7%;
+  left: 437px;
+
+  & iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border: none;
+  }
 
   &::after {
     position: absolute;
@@ -57,34 +64,43 @@
     height: 100%;
     top: 0px;
     left: 0;
-    background-color: $color-darkcerualean-half;
+    background-color: rgba(20, 54, 122, 0.5);
     z-index: 2;
   }
 
-  &:hover .about__video-button {
-    outline-color: $color-sapphire;
+  &:hover .about__video-button,
+  &:focus .about__video-button {
+    @include hover-focus;
+    outline-color: #102654;
   }
 
-  &:hover svg {
-    fill: $color-sapphire;
+  &:hover svg,
+  &:focus svg {
+    @include hover-focus;
+    fill: #102654;
   }
 
-  &:hover .about__video-button::before {
+  &:hover .about__video-button::before,
+  &:focus .about__video-button::before {
+    @include hover-focus;
     background: $color-default-white;
   }
 
   &:active .about__video-button {
+    @include active;
     width: 58px;
     height: 58px;
     outline-offset: 21px;
-    outline-color: $color-sapphire;
+    outline-color: #102654;
   }
 
   &:active svg {
-    fill: $color-sapphire;
+    @include active;
+    fill: #102654;
   }
 
   &:active .about__video-button::before {
+    @include active;
     background: $color-default-white;
   }
 }
@@ -114,7 +130,6 @@
   transform: translate(-50%, -50%);
   outline: 2px solid rgba($color-torch-red, 0.2);
   outline-offset: 14px;
-  display: none;
 
   &::before {
     position: absolute;
@@ -128,31 +143,17 @@
     z-index: 0;
   }
 
-  &:focus svg {
-    fill: $color-sapphire;
-  }
-
-  &:focus {
-    outline-color: $color-sapphire;
-  }
-
-  &:focus::before {
-    background: #ffffff;
-  }
-
   &:disabled {
-    opacity: 0.4;
-    outline-color: $color-sapphire;
-  }
-
-  &:disabled svg {
-    opacity: 0.4;
-    fill: $color-sapphire;
+    outline-color: #102654;
+    opacity: 40%;
   }
 
   &:disabled::before {
-    opacity: 0.4;
     background: $color-default-white;
+  }
+
+  &:disabled svg {
+    fill: #102654;
   }
 }
 
@@ -168,7 +169,7 @@
   .about__container {
     padding: 100px 0 183px;
     flex-direction: column;
-    gap: 50px;
+    gap: 43px;
   }
 
   .about__text-container {
@@ -179,17 +180,18 @@
     align-self: center;
     padding: 0;
     max-width: 502px;
+    margin: 0;
   }
 
   .about__title {
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 6px;
+    margin-bottom: 0;
     letter-spacing: 1.26px;
   }
 
   .about__description {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 
   .about__image-container {
@@ -212,35 +214,46 @@
 
   .about__video {
     width: 266px;
-    height: 0;
+    min-height: 167px;
     top: 587px;
     left: calc(50% - 130px);
     padding-bottom: 24.6%;
+  }
+
+  .about__video-button {
+    width: 52px;
+    height: 52px;
+    outline-offset: 10px;
+  }
+
+  .about__video-button svg {
+    width: 12px;
+    height: 12px;
   }
 }
 
 @media (max-width: $mobile-width) {
   .about__container {
-    padding: 70px 0 70px;
+    padding: 64px 0 70px;
     flex-direction: column;
-    gap: 40px;
+    gap: 37px;
   }
 
   .about__text-container {
     text-align: start;
-    align-self: center;
     max-width: 100%;
+    margin-left: -10px;
   }
 
   .about__title {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     letter-spacing: 0.96px;
   }
 
   .about__description {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .about__text {
@@ -250,6 +263,7 @@
   .about__image-container {
     position: relative;
     width: calc(100% + 30px);
+    min-height: 313px;
     padding-top: 100%;
     margin-left: -15px;
   }

@@ -5,7 +5,7 @@
 }
 
 .footer__container {
-  padding: 31px 0;
+  padding: 33px 0 22px;
 }
 
 .footer__nav {
@@ -16,7 +16,7 @@
 
 .footer__logo {
   display: flex;
-  padding: 10px;
+  padding: 10px 0;
   color: #ffffff;
   cursor: pointer;
 
@@ -45,8 +45,14 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
-  max-width: 450px;
+  gap: 21px;
+  max-width: 480px;
+  height: 100%;
+  padding-bottom: 13px;
+}
+
+.footer__nav-item {
+  height: 100%;
 }
 
 .footer__nav-link {
@@ -54,7 +60,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  padding: 5px 10px;
+  padding: 10px 9px;
   cursor: pointer;
 
   &:hover {
@@ -82,6 +88,8 @@
   padding: 0;
   gap: 11px;
   max-width: 150px;
+  padding-bottom: 10px;
+  margin-right: 3px;
 }
 
 .footer__nav-social-item {
@@ -110,13 +118,14 @@
   &:hover svg,
   &:focus svg,
   &:active svg {
-    @include hover;
+    @include hover-focus;
+    @include active;
     color: #ffffff;
   }
 
   &:hover::before,
   &:focus::before {
-    @include hover;
+    @include hover-focus;
     background-color: #103aae;
   }
 
@@ -143,12 +152,12 @@
   }
 
   .footer__container {
-    padding: 45px 0;
+    padding: 38px 0 39px;
   }
 
   .footer__logo {
     display: flex;
-    padding: 10px;
+    padding: 10px 0;
     color: #ffffff;
     cursor: pointer;
   }
@@ -159,8 +168,14 @@
   }
 
   .footer__nav-list {
-    gap: 10px;
-    max-width: 410px;
+    gap: 13px;
+    max-width: 430px;
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  .footer__nav-social {
+    padding: 0;
   }
 }
 
@@ -170,7 +185,7 @@
   }
 
   .footer__container {
-    padding: 51px 0;
+    padding: 46px 0;
   }
 
   .footer__nav {
@@ -197,16 +212,18 @@
   .footer__nav-list {
     flex-direction: column;
     max-height: 140px;
-    gap: 20px;
+    column-gap: 25px;
+    row-gap: 15px;
     width: 100%;
     flex-wrap: wrap;
     max-width: 100%;
     margin-bottom: 40px;
+    padding: 0;
   }
 
   .footer__nav-item {
     &:first-child {
-      padding-top: 44px;
+      padding-top: 40px;
     }
   }
 
@@ -216,5 +233,28 @@
     font-weight: 400;
     padding: 5px 0;
     cursor: pointer;
+  }
+
+  .footer__nav-social {
+    padding: 0;
+    align-items: center;
+  }
+
+  .footer__nav-social-link {
+    display: flex;
+    padding: 12px 12px 13px;
+    align-self: center;
+
+    &::before {
+      top: -6px;
+      left: 1px;
+    }
+  }
+
+  .footer__nav-social-link svg {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    color: #030a1a;
   }
 }

@@ -13,9 +13,9 @@
   margin-bottom: 48px;
 }
 
-@media screen and (max-width: $mobile-width) {
+@media screen and (max-width: $tablet-width) {
   .trainers__container {
-    padding: 50px 0 100px;
+    padding: 49px 0 99px;
   }
 
   .trainers__title {
@@ -23,20 +23,21 @@
     line-height: 50px;
     letter-spacing: 1.26px;
     margin-bottom: 31px;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: $mobile-width) {
   .trainers__container {
     position: relative;
-    padding: 35px 0 70px;
+    padding: 28px 0 70px;
   }
 
   .trainers__title {
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.96px;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
     text-align: center;
   }
 }
