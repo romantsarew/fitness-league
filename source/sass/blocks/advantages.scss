@@ -3,10 +3,10 @@
 }
 
 .advantages__container {
-  padding: 108px 0 129px;
+  padding: 108px 0 119px;
   display: flex;
   flex-direction: column;
-  gap: 55px;
+  gap: 49px;
 }
 
 .advantages__title {
@@ -37,6 +37,11 @@
   display: flex;
   max-width: 340px;
   gap: 30px;
+  height: fit-content;
+
+  &:nth-child(n + 3) span {
+    padding-left: 0;
+  }
 }
 
 .advantages__number {
@@ -48,6 +53,7 @@
   color: transparent;
   background-clip: text;
   background-image: linear-gradient(150deg, #d10a42 12%, #0041ca 40%);
+  padding-left: 19px;
 
   & b {
     font-family: $ff-roboto;
@@ -61,8 +67,9 @@
 .advantages__text {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 6px;
   color: #102654;
+  margin-top: -2px;
 
   & h3 {
     margin: 0;
@@ -83,12 +90,12 @@
 .advantages__item--space {
   grid-area: space;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
-  padding-bottom: 74px;
+  padding-bottom: 76px;
 }
 
 .advantages__item--comfort {
   grid-area: comfort;
-  padding-top: 74px;
+  padding-top: 75px;
 }
 
 .advantages__item--weights {
@@ -96,15 +103,16 @@
   background-color: #1c3374;
   flex-direction: column;
   align-items: center;
-  padding: 65px 34px;
+  padding: 58px 34px 57px 30px;
   max-width: 100%;
   gap: 0;
+  margin-top: 6px;
 
   & .advantages__number {
     color: $color-default-white;
     font-size: 74px;
     line-height: 65px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   & .advantages__text {
@@ -114,7 +122,7 @@
     & h3 {
       font-size: 26px;
       line-height: 39px;
-      margin-bottom: 40px;
+      margin-bottom: 25px;
     }
 
     & p {
@@ -126,20 +134,20 @@
 .advantages__item--parking {
   grid-area: parking;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
-  padding-bottom: 74px;
+  padding-bottom: 77px;
 }
 
 .advantages__item--trainers {
   grid-area: trainers;
-  padding-top: 74px;
+  padding-top: 75px;
 }
 
 @media screen and (max-width: $tablet-width) {
   .advantages__container {
-    padding: 100px 0;
+    padding: 92px 0;
     display: flex;
     flex-direction: column;
-    gap: 51px;
+    gap: 43px;
   }
 
   .advantages__title {
@@ -157,8 +165,8 @@
       "space parking"
       "weights weights"
       "comfort trainers";
-    column-gap: 50px;
-    row-gap: 50px;
+    column-gap: 30px;
+    row-gap: 39px;
     list-style-type: none;
   }
 
@@ -170,13 +178,22 @@
   }
 
   .advantages__number {
-    line-height: 58px;
+    line-height: 54px;
     font-size: 58px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    padding: 0;
+
+    & b {
+      font-family: $ff-roboto;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #2e35ac;
+    }
   }
 
   .advantages__text {
-    gap: 5px;
+    gap: 2px;
     width: 100%;
 
     & h3 {
@@ -193,26 +210,27 @@
 
   .advantages__item--comfort {
     grid-area: comfort;
-    padding-top: 0;
+    padding-top: 5px;
   }
 
   .advantages__item--weights {
     align-self: center;
-    padding: 30px 134px;
+    padding: 38px 134px 27px;
     max-width: 442px;
     gap: 0;
     min-height: 100%;
     margin: 0 auto;
 
     & .advantages__number {
-      margin-bottom: 10px;
+      padding-right: 4px;
+      margin-bottom: 3px;
     }
 
     & .advantages__text {
       & h3 {
         font-size: 22px;
         line-height: 33px;
-        margin-bottom: 20px;
+        margin-bottom: 11px;
       }
     }
   }
@@ -223,14 +241,14 @@
   }
 
   .advantages__item--trainers {
-    padding-top: 0;
+    padding-top: 5px;
   }
 }
 
 @media screen and (max-width: $mobile-width) {
   .advantages__container {
     padding: 63px 0;
-    gap: 50px;
+    gap: 47px;
   }
 
   .advantages__title {
@@ -243,7 +261,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
     list-style-type: none;
   }
 
@@ -252,24 +270,30 @@
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    gap: 10px;
-    padding: 0 36px;
+    gap: 6px;
+    padding: 0 30px;
+    min-width: 100%;
   }
 
   .advantages__number {
     align-items: center;
-    line-height: 58px;
-    font-size: 65px;
+    line-height: 52px;
+    font-size: 58px;
   }
 
   .advantages__text {
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 2px;
+    margin-top: 0;
 
     & h3 {
       font-size: 20px;
       line-height: 30px;
+    }
+
+    & p {
+      text-align: center;
     }
   }
 
@@ -280,7 +304,7 @@
   }
 
   .advantages__item--comfort {
-    padding-top: 0;
+    padding-top: 3px;
     order: 3;
   }
 
@@ -288,7 +312,7 @@
     padding: 40px 70px;
     width: calc(100% + 30px);
     margin-left: -15px;
-    gap: 5px;
+    gap: 1px;
     min-height: 239px;
     max-width: calc(100% + 30px);
     order: 2;
@@ -317,10 +341,19 @@
     border-bottom: none;
     padding-bottom: 0;
     order: 1;
+    gap: 3px;
+
+    & p {
+      padding-bottom: 4px;
+    }
   }
 
   .advantages__item--trainers {
     padding-top: 0;
     order: 4;
+
+    & span {
+      margin-top: -3px;
+    }
   }
 }

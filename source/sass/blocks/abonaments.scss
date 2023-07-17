@@ -15,7 +15,7 @@
     background-image: url("../../img/abonament-weights.png");
     background-repeat: no-repeat;
     background-position: -37px -82px;
-    bottom: -185px;
+    bottom: -191px;
     right: 0;
     width: 250px;
     height: 450px;
@@ -29,7 +29,7 @@
   margin: 0;
   font-weight: 600;
   letter-spacing: 1.62px;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -53,12 +53,13 @@
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
+    margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: $mobile-width) {
   .abonaments__container {
-    padding: 70px 0;
+    padding: 63px 0 70px;
 
     &::after {
       display: none;
@@ -69,6 +70,6 @@
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.96px;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
   }
 }

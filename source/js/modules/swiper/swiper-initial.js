@@ -24,6 +24,7 @@ function swiperTrainersTurnOn() {
         640: {
           slidesPerView: 1,
           spaceBetween: 0,
+          initialSlide: 7,
         },
       },
 
