@@ -2365,7 +2365,6 @@ button,
   .about__text-container {
     text-align: start;
     max-width: 100%;
-    margin-left: -10px;
     width: 100%;
   }
   .about__title {
@@ -2877,7 +2876,7 @@ button,
   background-color: #102654;
   color: #ffffff;
 }
-.competition__image {
+.competition__link .competition__image {
   background-color: #102654;
   min-width: 660px;
   min-height: 500px;
@@ -2896,13 +2895,6 @@ button,
     line-height: 18px;
     color: #ffffff;
     margin-bottom: 30px;
-  }
-  .competition__image {
-    width: 100%;
-  }
-  .competition__image img {
-    width: 100%;
-    height: 100%;
   }
   .competition__text-block {
     gap: 34px;
@@ -2944,12 +2936,16 @@ button,
     letter-spacing: 0.5px;
     text-align: center;
   }
+  .competition__image {
+    min-width: 386px;
+    min-height: 292px;
+    width: 100%;
+  }
+  .competition__image img {
+    width: 100%;
+    height: 100%;
+  }
 }
-.competition__image {
-  min-width: 386px;
-  min-height: 292px;
-}
-
 @media screen and (max-width: 767px) {
   .competition__container {
     padding: 70px 0 35px;
@@ -2968,7 +2964,7 @@ button,
   .competition__image {
     padding-top: 100%;
     position: relative;
-    width: 100%;
+    min-width: 100%;
     min-height: 292px;
   }
   .competition__image img {
@@ -2982,10 +2978,6 @@ button,
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .competition__image {
-    min-width: 100%;
-    min-height: 292px;
   }
 }
 .trainers__container {
@@ -4098,7 +4090,6 @@ button,
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgba(16, 38, 84, 0.2);
-  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -4192,7 +4183,6 @@ button,
   border-radius: 50%;
   border: 1px solid #1c3374;
   background-color: transparent;
-  cursor: pointer;
 }
 .faq__element-button.is-closed {
   background-image: url("../../img/svg/accordion-plus.svg");
@@ -4334,7 +4324,7 @@ button,
   .faq__element-item h3 {
     font-size: 18px;
     line-height: 21px;
-    padding-right: 68px;
+    padding-right: 38px;
     margin-bottom: 0;
   }
   .faq__element-item p {

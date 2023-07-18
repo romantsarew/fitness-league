@@ -109,12 +109,12 @@
     background-color: #102654;
     color: $color-default-white;
   }
-}
 
-.competition__image {
-  background-color: #102654;
-  min-width: 660px;
-  min-height: 500px;
+  .competition__image {
+    background-color: #102654;
+    min-width: 660px;
+    min-height: 500px;
+  }
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -131,15 +131,6 @@
       line-height: 18px;
       color: $color-default-white;
       margin-bottom: 30px;
-    }
-  }
-
-  .competition__image {
-    width: 100%;
-
-    & img {
-      width: 100%;
-      height: 100%;
     }
   }
 
@@ -189,11 +180,17 @@
     letter-spacing: 0.5px;
     text-align: center;
   }
-}
 
-.competition__image {
-  min-width: 386px;
-  min-height: 292px;
+  .competition__image {
+    min-width: 386px;
+    min-height: 292px;
+    width: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: $mobile-width) {
@@ -211,7 +208,7 @@
   .competition__image {
     padding-top: 100%;
     position: relative;
-    width: 100%;
+    min-width: 100%;
     min-height: 292px;
 
     & img {
@@ -225,10 +222,5 @@
 
   .competition__text-block {
     justify-content: space-between;
-  }
-
-  .competition__image {
-    min-width: 100%;
-    min-height: 292px;
   }
 }

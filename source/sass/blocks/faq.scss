@@ -46,7 +46,6 @@
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgba(16, 38, 84, 0.2);
-  cursor: pointer;
   user-select: none;
 
   &.is-active {
@@ -134,7 +133,6 @@
   border-radius: 50%;
   border: 1px solid #1c3374;
   background-color: transparent;
-  cursor: pointer;
 
   &.is-closed {
     background-image: url("../../img/svg/accordion-plus.svg");
@@ -290,7 +288,7 @@
     & h3 {
       font-size: 18px;
       line-height: 21px;
-      padding-right: 68px;
+      padding-right: 38px;
       margin-bottom: 0;
     }
 
