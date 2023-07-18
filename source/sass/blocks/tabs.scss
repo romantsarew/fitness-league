@@ -28,6 +28,7 @@
   font-size: 20px;
   line-height: 30px;
   padding: 0 0 11px;
+  user-select: none;
 
   &.is-active {
     position: relative;
@@ -126,6 +127,7 @@
     color: #102654;
     font-weight: 600;
     z-index: 5;
+    cursor: pointer;
   }
 
   & strong {
@@ -148,6 +150,7 @@
     font-weight: 700;
     border: 2px solid rgba(16, 38, 84, 1);
     box-sizing: border-box;
+    user-select: none;
 
     &:hover,
     &:focus {

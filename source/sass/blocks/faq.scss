@@ -46,6 +46,7 @@
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgba(16, 38, 84, 0.2);
+  user-select: none;
 
   &.is-active {
     background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
@@ -126,7 +127,6 @@
   position: absolute;
   top: 26px;
   right: 0;
-  border: none;
   cursor: pointer;
   width: 42px;
   height: 42px;
@@ -173,7 +173,7 @@
 @media screen and (max-width: $tablet-width) {
   .faq__container {
     padding: 100px 0;
-    gap: 43px;
+    gap: 40px;
   }
 
   .faq__title {
@@ -268,12 +268,6 @@
 
   .faq__element-item {
     width: 100%;
-    & p {
-      max-width: 560px;
-    }
-  }
-
-  .faq__element-item {
     padding: 20px 0 19px;
     min-height: 84px;
 
@@ -294,7 +288,7 @@
     & h3 {
       font-size: 18px;
       line-height: 21px;
-      padding-right: 68px;
+      padding-right: 38px;
       margin-bottom: 0;
     }
 

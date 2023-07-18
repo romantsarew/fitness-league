@@ -2,7 +2,9 @@ const trainersSlider = document.querySelector('.trainers__slider');
 const opinionSlider = document.querySelector('.opinions__slider');
 
 function swiperTrainersTurnOn() {
+
   if (trainersSlider) {
+    // eslint-disable-next-line no-undef
     const swiper = new Swiper(trainersSlider, {
       initialSlide: 0,
       cssMode: true,
@@ -29,8 +31,8 @@ function swiperTrainersTurnOn() {
       },
 
       navigation: {
-        nextEl: '.swiper__button--next',
-        prevEl: '.swiper__button--prev',
+        nextEl: '.trainers__button--next',
+        prevEl: '.trainers__button--prev',
       },
     });
     return swiper;
@@ -40,7 +42,9 @@ function swiperTrainersTurnOn() {
 
 
 function swiperOpinionsTurnOn() {
+
   if (opinionSlider) {
+    // eslint-disable-next-line no-undef
     const swiper = new Swiper(opinionSlider, {
       slidesPerView: 1,
       cssMode: true,

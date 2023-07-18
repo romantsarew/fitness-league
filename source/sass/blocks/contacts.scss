@@ -73,7 +73,7 @@
       @include focus;
       @include active;
       @include hover-focus;
-      border: 1px solid #ffffff;
+      outline: 1px solid #ffffff;
     }
 
     &:disabled {
@@ -128,6 +128,8 @@
   line-height: 16px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -248,7 +250,7 @@
   .contacts__free-container {
     display: flex;
     flex-direction: column;
-    padding: 62px 163px 70px 134px;
+    padding: 62px 162px 70px 134px;
     max-width: 100%;
     min-width: 472px;
     box-sizing: content-box;
