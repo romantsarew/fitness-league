@@ -66,6 +66,7 @@
     margin-top: 10px;
     border-bottom: 1px solid #ffffff;
     width: fit-content;
+    cursor: pointer;
 
     &:hover {
       @include hover;
@@ -89,6 +90,7 @@
 }
 
 .promotions__main-picture {
+  background-color: #528ec6;
   min-height: 462px;
   min-width: 280px;
 
@@ -146,6 +148,8 @@
     border-bottom: 1px solid #1c3374;
     width: fit-content;
     color: #1c3374;
+    cursor: pointer;
+    user-select: none;
 
     &:hover {
       @include hover;

@@ -160,13 +160,13 @@
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 239px 1fr;
+    grid-template-rows: none;
     grid-template-areas:
       "space parking"
       "weights weights"
       "comfort trainers";
     column-gap: 30px;
-    row-gap: 39px;
+    row-gap: 44px;
     list-style-type: none;
   }
 
@@ -195,6 +195,7 @@
   .advantages__text {
     gap: 2px;
     width: 100%;
+    margin: 0;
 
     & h3 {
       font-size: 20px;
@@ -210,12 +211,18 @@
 
   .advantages__item--comfort {
     grid-area: comfort;
-    padding-top: 5px;
+    padding-top: 0;
+
+    & .advantages__text {
+      & h3 {
+        margin-top: -2px;
+      }
+    }
   }
 
   .advantages__item--weights {
     align-self: center;
-    padding: 38px 134px 27px;
+    padding: 36px 134px 39px;
     max-width: 442px;
     gap: 0;
     min-height: 100%;
@@ -223,7 +230,7 @@
 
     & .advantages__number {
       padding-right: 4px;
-      margin-bottom: 3px;
+      margin-bottom: 5px;
     }
 
     & .advantages__text {
@@ -241,7 +248,13 @@
   }
 
   .advantages__item--trainers {
-    padding-top: 5px;
+    padding-top: 0;
+
+    & .advantages__text {
+      & h3 {
+        margin-top: -2px;
+      }
+    }
   }
 }
 
@@ -306,6 +319,12 @@
   .advantages__item--comfort {
     padding-top: 3px;
     order: 3;
+
+    & .advantages__text {
+      & h3 {
+        margin-top: 0;
+      }
+    }
   }
 
   .advantages__item--weights {
@@ -354,6 +373,12 @@
 
     & span {
       margin-top: -3px;
+    }
+
+    & .advantages__text {
+      & h3 {
+        margin-top: 0;
+      }
     }
   }
 }

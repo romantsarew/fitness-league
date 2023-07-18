@@ -12,6 +12,9 @@
 
 .swiper__slide-picture {
   position: relative;
+  background-color: #9aa2b3;
+  min-width: 260px;
+  min-height: 294px;
 
   & p {
     color: $color-default-white;
@@ -29,6 +32,8 @@
 }
 
 .swiper .swiper__slide {
+  cursor: pointer;
+
   &:hover picture::after,
   &:focus picture::after {
     @include hover-focus;
@@ -78,7 +83,6 @@
   flex-direction: column;
   padding: 0;
   margin: 0;
-  width: 100%;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
@@ -86,68 +90,6 @@
   max-width: 165px;
   gap: 13px;
   padding-left: 20px;
-}
-
-.swiper__button {
-  position: absolute;
-  content: "";
-  width: 56px;
-  height: 56px;
-  bottom: 36%;
-  border: none;
-  background-color: transparent;
-  z-index: 5;
-  border-radius: 50%;
-
-  &:hover,
-  &:focus {
-    @include hover-focus;
-    border: 1px solid #102654;
-  }
-
-  &:hover svg,
-  &:focus svg {
-    @include hover-focus;
-    color: #102654;
-  }
-
-  &:active {
-    @include active;
-    background-color: #102654;
-  }
-
-  &:active svg {
-    @include active;
-    color: $color-default-white;
-  }
-
-  &:disabled svg {
-    color: rgba(16, 38, 84, 0.3);
-  }
-}
-
-.swiper__button svg {
-  position: absolute;
-  top: 12px;
-  left: 16px;
-  color: #afafaf;
-}
-
-.swiper__button--prev {
-  left: -75px;
-}
-
-.swiper__button--next {
-  right: -70px;
-}
-
-.swiper__button--prev svg {
-  top: 10px;
-}
-
-.swiper__button--next svg {
-  transform: rotate(180deg);
-  left: 22px;
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -165,6 +107,9 @@
   }
 
   .swiper__slide-picture {
+    min-width: 268px;
+    min-height: 294px;
+
     & p {
       bottom: 22px;
       left: 51%;
@@ -189,42 +134,6 @@
   .swiper__text-advantages {
     width: 170px;
     max-width: 170px;
-  }
-
-  .swiper__button {
-    position: absolute;
-    content: "";
-    width: 56px;
-    height: 56px;
-    bottom: 41.5%;
-    border: none;
-    background-color: transparent;
-    z-index: 5;
-    border-radius: 50%;
-  }
-
-  .swiper__button svg {
-    position: absolute;
-    top: 12px;
-    left: 14px;
-    color: #afafaf;
-  }
-
-  .swiper__button--next svg {
-    transform: rotate(180deg);
-    left: 22px;
-  }
-
-  .swiper__button--prev svg {
-    top: 9px;
-  }
-
-  .swiper__button--prev {
-    left: -16px;
-  }
-
-  .swiper__button--next {
-    right: -17px;
   }
 }
 
@@ -251,38 +160,16 @@
     }
   }
 
+  .swiper__slide-picture {
+    min-width: 226px;
+    min-height: 274px;
+  }
+
   .swiper__text {
     top: 64px;
 
     & span {
       margin-bottom: 34px;
     }
-  }
-
-  .swiper__button {
-    width: 30px;
-    height: 30px;
-    bottom: 40%;
-    transform: translate(0, -40%);
-  }
-
-  .swiper__button svg {
-    width: 10px;
-    height: 19px;
-    top: 6px;
-    left: 8px;
-  }
-
-  .swiper__button--prev {
-    left: -10px;
-  }
-
-  .swiper__button--next {
-    right: -10px;
-  }
-
-  .swiper__button--next svg {
-    transform: rotate(180deg);
-    left: 12px;
   }
 }

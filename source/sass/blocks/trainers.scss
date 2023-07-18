@@ -13,6 +13,69 @@
   margin-bottom: 48px;
 }
 
+.trainers__button {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 56px;
+  bottom: 40%;
+  border: none;
+  background-color: transparent;
+  z-index: 5;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    @include hover-focus;
+    border: 1px solid #102654;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    @include hover-focus;
+    color: #102654;
+  }
+
+  &:active {
+    @include active;
+    background-color: #102654;
+  }
+
+  &:active svg {
+    @include active;
+    color: $color-default-white;
+  }
+
+  &:disabled svg {
+    color: rgba(16, 38, 84, 0.3);
+  }
+}
+
+.trainers__button svg {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: #afafaf;
+}
+
+.trainers__button--prev {
+  left: -75px;
+}
+
+.trainers__button--next {
+  right: -75px;
+}
+
+.trainers__button--prev svg {
+  top: 10px;
+}
+
+.trainers__button--next svg {
+  transform: rotate(180deg);
+  left: 22px;
+}
+
 @media screen and (max-width: $tablet-width) {
   .trainers__container {
     padding: 49px 0 99px;
@@ -24,6 +87,42 @@
     letter-spacing: 1.26px;
     margin-bottom: 31px;
     text-align: center;
+  }
+
+  .trainers__button {
+    position: absolute;
+    content: "";
+    width: 56px;
+    height: 56px;
+    bottom: 41.5%;
+    border: none;
+    background-color: transparent;
+    z-index: 5;
+    border-radius: 50%;
+  }
+
+  .trainers__button svg {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    color: #afafaf;
+  }
+
+  .trainers__button--next svg {
+    transform: rotate(180deg);
+    left: 22px;
+  }
+
+  .trainers__button--prev svg {
+    top: 9px;
+  }
+
+  .trainers__button--prev {
+    left: -16px;
+  }
+
+  .trainers__button--next {
+    right: -17px;
   }
 }
 
@@ -39,5 +138,32 @@
     letter-spacing: 0.96px;
     margin-bottom: 42px;
     text-align: center;
+  }
+
+  .trainers__button {
+    width: 30px;
+    height: 30px;
+    bottom: 40%;
+    transform: translate(0, -40%);
+  }
+
+  .trainers__button svg {
+    width: 10px;
+    height: 19px;
+    top: 6px;
+    left: 8px;
+  }
+
+  .trainers__button--prev {
+    left: -10px;
+  }
+
+  .trainers__button--next {
+    right: -10px;
+  }
+
+  .trainers__button--next svg {
+    transform: rotate(180deg);
+    left: 12px;
   }
 }

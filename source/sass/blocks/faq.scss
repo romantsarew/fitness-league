@@ -46,6 +46,8 @@
   cursor: pointer;
   background-color: transparent;
   border: 1px solid rgba(16, 38, 84, 0.2);
+  cursor: pointer;
+  user-select: none;
 
   &.is-active {
     background: var(--1, linear-gradient(151deg, #ed0233 0%, #003eb7 100%));
@@ -126,13 +128,13 @@
   position: absolute;
   top: 26px;
   right: 0;
-  border: none;
   cursor: pointer;
   width: 42px;
   height: 42px;
   border-radius: 50%;
   border: 1px solid #1c3374;
   background-color: transparent;
+  cursor: pointer;
 
   &.is-closed {
     background-image: url("../../img/svg/accordion-plus.svg");
@@ -173,7 +175,7 @@
 @media screen and (max-width: $tablet-width) {
   .faq__container {
     padding: 100px 0;
-    gap: 43px;
+    gap: 40px;
   }
 
   .faq__title {
@@ -268,12 +270,6 @@
 
   .faq__element-item {
     width: 100%;
-    & p {
-      max-width: 560px;
-    }
-  }
-
-  .faq__element-item {
     padding: 20px 0 19px;
     min-height: 84px;
 
