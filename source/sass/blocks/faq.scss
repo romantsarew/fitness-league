@@ -135,31 +135,31 @@
   background-color: transparent;
 
   &.is-closed {
-    background-image: url("../../img/svg/accordion-plus.svg");
+    background-image: url("../img/svg/accordion-plus.svg");
     background-repeat: no-repeat;
     background-position: center;
 
     &:hover {
       @include hover;
       background-color: #102654;
-      background-image: url("../../img/svg/accordion-plus-white.svg");
+      background-image: url("../img/svg/accordion-plus-white.svg");
     }
 
     &:focus {
       @include focus;
       background-color: #102654;
-      background-image: url("../../img/svg/accordion-plus-white.svg");
+      background-image: url("../img/svg/accordion-plus-white.svg");
     }
 
     &:active {
       @include active;
       background-color: #102654;
-      background-image: url("../../img/svg/accordion-plus-white.svg");
+      background-image: url("../img/svg/accordion-plus-white.svg");
     }
   }
 
   &.is-opened {
-    background-image: url("../../img/svg/accordion-minus.svg");
+    background-image: url("../img/svg/accordion-minus.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #102654;
@@ -277,12 +277,8 @@
       }
     }
 
-    &:nth-child(3) .faq__element-button {
+    &:nth-child(n + 3) .faq__element-button {
       top: 25px;
-    }
-
-    &:nth-child(4) .faq__element-button {
-      top: 23px;
     }
 
     & h3 {

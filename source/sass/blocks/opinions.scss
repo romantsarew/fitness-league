@@ -16,7 +16,7 @@
   margin: 0;
   color: #102654;
   text-align: center;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 }
 
 .opinions__slide-container {
@@ -34,7 +34,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/opinion-photo.png");
+    background-image: url("../img/opinion-photo.png");
     width: 80px;
     height: 80px;
     top: 62px;
@@ -98,8 +98,8 @@
 
 .opinions__slider-button svg {
   position: absolute;
-  top: 14px;
-  left: 19px;
+  top: 10px;
+  left: 14px;
   color: #afafaf;
 }
 
@@ -113,7 +113,8 @@
 
 .opinions__slider-button--next svg {
   transform: rotate(180deg);
-  left: 18px;
+  top: 12px;
+  left: 22px;
 }
 
 @media screen and (max-width: $tablet-width) {
@@ -197,7 +198,7 @@
       &::after {
         position: absolute;
         content: "";
-        background-image: url("../../img/opinion-photo-mobile.png");
+        background-image: url("../img/opinion-photo-mobile.png");
         width: 68px;
         height: 68px;
         top: 0;

@@ -4,7 +4,7 @@ const opinionSlider = document.querySelector('.opinions__slider');
 function swiperTrainersTurnOn() {
 
   if (trainersSlider) {
-    // eslint-disable-next-line no-undef
+    // eslint-disable-next-line no-undef, no-unused-vars
     const swiper = new Swiper(trainersSlider, {
       initialSlide: 0,
       cssMode: true,
@@ -35,16 +35,13 @@ function swiperTrainersTurnOn() {
         prevEl: '.trainers__button--prev',
       },
     });
-    return swiper;
   }
-  return (swiperTrainersTurnOn());
 }
 
 
 function swiperOpinionsTurnOn() {
-
   if (opinionSlider) {
-    // eslint-disable-next-line no-undef
+    // eslint-disable-next-line no-undef, no-unused-vars
     const swiper = new Swiper(opinionSlider, {
       slidesPerView: 1,
       cssMode: true,
@@ -55,9 +52,7 @@ function swiperOpinionsTurnOn() {
         prevEl: '.opinions__slider-button--prev',
       },
     });
-    return swiper;
   }
-  return (swiperOpinionsTurnOn());
 }
 
 export {swiperTrainersTurnOn, swiperOpinionsTurnOn};

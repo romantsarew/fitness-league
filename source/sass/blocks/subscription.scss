@@ -1,9 +1,9 @@
-.abonaments {
+.subscription {
   position: relative;
   background-color: #f8f9fc;
 }
 
-.abonaments__container {
+.subscription__container {
   padding: 120px 0;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../../img/abonament-weights.png");
+    background-image: url("../img/subscription-weights.png");
     background-repeat: no-repeat;
     background-position: -37px -82px;
     bottom: -191px;
@@ -22,7 +22,7 @@
   }
 }
 
-.abonaments__title {
+.subscription__title {
   font-family: $ff-alumni;
   font-size: 54px;
   line-height: 65px;
@@ -33,13 +33,13 @@
 }
 
 @media screen and (max-width: $tablet-width) {
-  .abonaments__container {
+  .subscription__container {
     padding: 100px 0;
 
     &::after {
       position: absolute;
       content: "";
-      background-image: url("../../img/abonament-weights-tablet.png");
+      background-image: url("../img/subscription-weights-tablet.png");
       background-repeat: no-repeat;
       background-position: -27px 0;
       bottom: -81px;
@@ -49,7 +49,7 @@
     }
   }
 
-  .abonaments__title {
+  .subscription__title {
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
@@ -58,7 +58,7 @@
 }
 
 @media screen and (max-width: $mobile-width) {
-  .abonaments__container {
+  .subscription__container {
     padding: 63px 0 70px;
 
     &::after {
@@ -66,7 +66,7 @@
     }
   }
 
-  .abonaments__title {
+  .subscription__title {
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.96px;
