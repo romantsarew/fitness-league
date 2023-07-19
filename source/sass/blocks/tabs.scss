@@ -95,6 +95,7 @@
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     color: $color-default-white;
     border: none;
+    padding: 26px 43px;
   }
 
   & h3 {
@@ -142,7 +143,7 @@
   }
 
   & a {
-    padding: 24px 43px;
+    padding: 24px 30px;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.6px;
@@ -151,6 +152,8 @@
     border: 2px solid rgba(16, 38, 84, 1);
     box-sizing: border-box;
     user-select: none;
+    text-align: center;
+    width: 100%;
 
     &:hover,
     &:focus {
@@ -158,6 +161,7 @@
       background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
       color: $color-default-white;
       border: none;
+      padding: 26px 43px;
     }
 
     &:active {
@@ -201,8 +205,6 @@
     min-height: 448px;
     padding: 56px 111px 61px;
     background-color: $color-default-white;
-    border: 7px solid transparent;
-    box-sizing: border-box;
   }
 }
 

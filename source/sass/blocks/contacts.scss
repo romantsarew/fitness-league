@@ -84,7 +84,7 @@
       opacity: 30%;
     }
 
-    &:invalid {
+    &:invalid:not(:placeholder-shown) {
       border-bottom: 1px solid #ff121f;
     }
 
@@ -180,7 +180,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "address tel" "time email";
   column-gap: 120px;
-  row-gap: 17px;
+  row-gap: 13px;
   padding-left: 5px;
 
   &::after {
@@ -200,7 +200,6 @@
 
   & h4 {
     font-weight: 700;
-    list-style: 16px;
     line-height: 24px;
     color: #102654;
     margin: 0;
@@ -214,6 +213,16 @@
     line-height: 21px;
     font-weight: 400;
     min-width: 170px;
+  }
+
+  & a {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    min-width: 170px;
+    color: #102654;
   }
 }
 
@@ -348,6 +357,14 @@
       font-size: 18px;
       line-height: 27px;
       min-width: 218px;
+    }
+
+    & a {
+      margin: 0;
+      font-size: 18px;
+      line-height: 27px;
+      min-width: 218px;
+      color: #102654;
     }
   }
 }
