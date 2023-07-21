@@ -7,6 +7,7 @@
 }
 
 .contacts__free {
+  display: flex;
   background-color: #102654;
   width: 50%;
 
@@ -21,10 +22,10 @@
   display: flex;
   flex-direction: column;
   padding: 55px 170px 70px 103px;
-  max-width: 410px;
+  min-width: 410px;
   box-sizing: content-box;
-  margin-left: auto;
   gap: 13px;
+  margin-left: auto;
 }
 
 .contacts__free-title {
@@ -240,6 +241,18 @@
 
 .contacts__item--email {
   grid-area: email;
+}
+
+.contacts__item--tel a:hover,
+.contacts__item--tel a:focus,
+.contacts__item--email a:hover,
+.contacts__item--email a:focus {
+  opacity: 70%;
+}
+
+.contacts__item--tel a:active,
+.contacts__item--email a:active {
+  opacity: 30%;
 }
 
 @media screen and (max-width: $tablet-width) {

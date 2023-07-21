@@ -11,7 +11,7 @@
 
 .intro__container {
   display: flex;
-  padding: 51px 0;
+  padding: 51px 283px 51px 82px;
   gap: 68px;
 }
 
@@ -116,6 +116,12 @@
   min-height: 556px;
 }
 
+@media (max-width: 1334px) {
+  .intro__picture {
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .intro {
     background: conic-gradient(
@@ -130,7 +136,7 @@
 
   .intro__container {
     display: flex;
-    padding: 82px 0;
+    padding: 82px 25px;
     gap: 31px;
   }
 
@@ -187,6 +193,7 @@
     background-color: #102654;
     min-width: 324px;
     min-height: 390px;
+    margin: 0;
   }
 
   .intro__container img {
@@ -228,13 +235,14 @@
 
   .intro__text-wrapper {
     display: flex;
-    margin-bottom: 25px;
+    margin: 0 auto;
   }
 
   .intro__title {
     padding-left: 0;
     letter-spacing: 1.6px;
     max-width: 100%;
+    margin-bottom: 25px;
   }
 
   .intro__city {
@@ -247,7 +255,7 @@
   .intro__list {
     min-width: 113px;
     align-self: flex-end;
-    margin-bottom: 30px;
+    margin-bottom: 53px;
     margin-right: -9px;
   }
 
