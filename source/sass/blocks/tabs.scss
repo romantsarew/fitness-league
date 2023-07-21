@@ -38,10 +38,11 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @include hover-focus;
     color: #102654;
     border-bottom: 2px solid #d10a42;
+    outline: none;
   }
 
   &:active {
@@ -84,19 +85,19 @@
   border: 7px solid transparent;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @include hover-focus;
     border: 7px solid transparent;
     border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
   }
 
   &:hover a,
-  &:focus a {
+  &:focus-visible a {
     @include hover-focus;
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     color: $color-default-white;
-    border: none;
     padding: 26px 43px;
+    outline: none;
   }
 
   & h3 {
@@ -157,12 +158,13 @@
     width: 100%;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       @include hover-focus;
       background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
       color: $color-default-white;
       border: none;
       padding: 26px 43px;
+      outline: none;
     }
 
     &:active {

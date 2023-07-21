@@ -23,10 +23,11 @@
     outline-offset: 5px;
   }
 
-  &:focus {
+  &:focus-visible {
     @include focus;
     background-color: #ffffff;
     color: #103aae;
+    outline: none;
   }
 
   &:active {
@@ -52,10 +53,11 @@
     outline-offset: 5px;
   }
 
-  &:focus {
+  &:focus-visible {
     @include focus;
     background-color: #ffffff;
     color: #103aae;
+    outline: none;
   }
 
   &:active {
