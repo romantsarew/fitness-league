@@ -1,6 +1,5 @@
 .opinions__container {
   padding: 120px 0;
-  position: relative;
 }
 
 .opinions__slider {
@@ -57,6 +56,15 @@
   }
 }
 
+.opinions__slider-buttons {
+  position: absolute;
+  width: 560px;
+  min-height: 242px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .opinions__slider-button {
   position: absolute;
   content: "";
@@ -69,24 +77,24 @@
   border-radius: 50%;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
     @include hover-focus;
-    border: 1px solid #102654;
+    outline: 1px solid #102654;
   }
 
-  &:hover svg,
-  &:focus svg {
+  &:not(:disabled):hover svg,
+  &:not(:disabled):focus svg {
     @include hover-focus;
     color: #102654;
   }
 
-  &:active {
+  &:not(:disabled):active {
     @include active;
     background-color: #102654;
   }
 
-  &:active svg {
+  &:not(:disabled):active svg {
     @include active;
     color: $color-default-white;
   }
@@ -104,11 +112,11 @@
 }
 
 .opinions__slider-button--prev {
-  right: 76%;
+  left: -74px;
 }
 
 .opinions__slider-button--next {
-  left: 76%;
+  right: -74px;
 }
 
 .opinions__slider-button--next svg {
@@ -140,14 +148,6 @@
     }
   }
 
-  .opinions__slider-button--prev {
-    right: 94%;
-  }
-
-  .opinions__slider-button--next {
-    left: 94%;
-  }
-
   .opinions__slider-button svg {
     position: absolute;
     top: 10px;
@@ -162,6 +162,10 @@
 }
 
 @media screen and (max-width: $mobile-width) {
+  .opinions .container {
+    padding: 0;
+  }
+
   .opinions__container {
     padding: 63px 0 70px;
   }
@@ -212,10 +216,16 @@
     }
   }
 
+  .opinions__slider-buttons {
+    position: absolute;
+    width: 100%;
+    min-height: 335px;
+  }
+
   .opinions__slider-button {
     width: 30px;
     height: 33px;
-    bottom: 38%;
+    bottom: 40.6%;
     transform: translate(0, -41%);
   }
 
@@ -227,11 +237,11 @@
   }
 
   .opinions__slider-button--prev {
-    right: 93%;
+    left: 5px;
   }
 
   .opinions__slider-button--next {
-    left: 93%;
+    right: 5px;
   }
 
   .opinions__slider-button--next svg {

@@ -1,6 +1,6 @@
 .trainers__container {
   position: relative;
-  padding: 53px 0 105px;
+  padding: 53px 82px 105px;
 }
 
 .trainers__title {
@@ -11,6 +11,7 @@
   margin: 0;
   letter-spacing: 1.62px;
   margin-bottom: 48px;
+  padding-left: 3px;
 }
 
 .trainers__button {
@@ -28,7 +29,7 @@
   &:hover,
   &:focus {
     @include hover-focus;
-    border: 1px solid #102654;
+    outline: 1px solid #102654;
   }
 
   &:hover svg,
@@ -60,11 +61,11 @@
 }
 
 .trainers__button--prev {
-  left: -75px;
+  left: 10px;
 }
 
 .trainers__button--next {
-  right: -75px;
+  right: 10px;
 }
 
 .trainers__button--prev svg {
@@ -78,7 +79,7 @@
 
 @media screen and (max-width: $tablet-width) {
   .trainers__container {
-    padding: 49px 0 99px;
+    padding: 49px 81px 90px;
   }
 
   .trainers__title {
@@ -114,15 +115,15 @@
   }
 
   .trainers__button--prev svg {
-    top: 9px;
+    top: 11px;
   }
 
   .trainers__button--prev {
-    left: -16px;
+    left: 9px;
   }
 
   .trainers__button--next {
-    right: -17px;
+    right: 9px;
   }
 }
 

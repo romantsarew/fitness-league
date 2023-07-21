@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding: 20px 83px 0 83px;
 }
 
 .header__logo {
@@ -67,7 +67,7 @@
 
 @media (max-width: $tablet-width) {
   .header__container {
-    padding-top: 20px;
+    padding: 20px 25px 0;
   }
 
   .header__logo svg {
@@ -86,6 +86,7 @@
 
 @media (max-width: $mobile-width) {
   .header__container {
+    padding: 0;
     padding-top: 5px;
   }
 

@@ -3,7 +3,7 @@
 }
 
 .faq__container {
-  padding: 120px 0;
+  padding: 120px 83px;
   display: flex;
   flex-direction: column;
   gap: 39px;
@@ -172,7 +172,7 @@
 
 @media screen and (max-width: $tablet-width) {
   .faq__container {
-    padding: 100px 0;
+    padding: 100px 25px;
     gap: 40px;
   }
 
@@ -251,7 +251,8 @@
   }
 
   .faq__list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -262,7 +263,8 @@
   .faq__button {
     font-size: 16px;
     line-height: 16px;
-    width: 141px;
+    min-width: 141px;
+    width: 100%;
     min-height: 44px;
   }
 

@@ -3,7 +3,7 @@
 }
 
 .advantages__container {
-  padding: 108px 0 119px;
+  padding: 108px 143px 122px;
   display: flex;
   flex-direction: column;
   gap: 49px;
@@ -22,7 +22,7 @@
 
 .advantages__list {
   margin: 0;
-  padding: 0 60px;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
   grid-template-rows: 1fr 1fr;
@@ -89,12 +89,12 @@
 
 .advantages__item--space {
   grid-area: space;
-  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
   padding-bottom: 76px;
 }
 
 .advantages__item--comfort {
   grid-area: comfort;
+  border-top: 2px solid rgba(209, 10, 66, 0.2);
   padding-top: 75px;
 }
 
@@ -133,18 +133,18 @@
 
 .advantages__item--parking {
   grid-area: parking;
-  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
   padding-bottom: 77px;
 }
 
 .advantages__item--trainers {
   grid-area: trainers;
   padding-top: 75px;
+  border-top: 2px solid rgba(209, 10, 66, 0.2);
 }
 
 @media screen and (max-width: $tablet-width) {
   .advantages__container {
-    padding: 92px 0;
+    padding: 92px 25px;
     display: flex;
     flex-direction: column;
     gap: 43px;
@@ -205,13 +205,13 @@
 
   .advantages__item--space {
     grid-area: space;
-    border: none;
     padding-bottom: 0;
   }
 
   .advantages__item--comfort {
     grid-area: comfort;
     padding-top: 0;
+    border: none;
 
     & .advantages__text {
       & h3 {
@@ -243,12 +243,12 @@
   }
 
   .advantages__item--parking {
-    border: none;
     padding-bottom: 0;
   }
 
   .advantages__item--trainers {
     padding-top: 0;
+    border: none;
 
     & .advantages__text {
       & h3 {

@@ -1,15 +1,15 @@
 .about__container {
-  padding: 120px 0 235px;
+  padding: 120px 83px 235px 143px;
   position: relative;
   display: flex;
   gap: 85px;
 }
 
 .about__text-container {
-  max-width: 415px;
+  max-width: 355px;
   color: #102654;
-  padding-left: 60px;
   margin-top: 39px;
+  min-width: 355px;
 }
 
 .about__title {
@@ -40,8 +40,7 @@
 
 .about__image-container {
   background-color: #e3e1e1;
-  min-width: 660px;
-  min-height: 401px;
+  height: fit-content;
 }
 
 .about__image-container img {
@@ -53,7 +52,7 @@
   width: 364px;
   min-height: 228px;
   top: 408px;
-  left: 437px;
+  left: 520px;
   cursor: pointer;
 
   & iframe {
@@ -155,6 +154,42 @@
     z-index: 0;
   }
 
+  &:hover,
+  &:focus {
+    @include hover-focus;
+    outline-color: #102654;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    @include hover-focus;
+    fill: #102654;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    @include hover-focus;
+    background: $color-default-white;
+  }
+
+  &:active {
+    @include active;
+    width: 58px;
+    height: 58px;
+    outline-offset: 21px;
+    outline-color: #102654;
+  }
+
+  &:active svg {
+    @include active;
+    fill: #102654;
+  }
+
+  &:active::before {
+    @include active;
+    background: $color-default-white;
+  }
+
   &:disabled {
     outline-color: #102654;
     opacity: 40%;
@@ -179,7 +214,7 @@
 
 @media (max-width: $tablet-width) {
   .about__container {
-    padding: 100px 0 183px;
+    padding: 100px 25px 183px;
     flex-direction: column;
     gap: 43px;
   }
@@ -224,11 +259,11 @@
   }
 
   .about__video {
-    width: 266px;
+    min-width: 266px;
     min-height: 167px;
+    width: auto;
     top: 587px;
     left: calc(50% - 130px);
-    padding-bottom: 24.6%;
   }
 
   .about__video-button {
@@ -254,6 +289,7 @@
     text-align: start;
     max-width: 100%;
     width: 100%;
+    min-width: 100%;
   }
 
   .about__title {

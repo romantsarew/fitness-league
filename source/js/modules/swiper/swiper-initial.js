@@ -12,7 +12,7 @@ function swiperTrainersTurnOn() {
       loop: true,
       breakpoints: {
         // when window width is >= 1200px
-        1199: {
+        1200: {
           slidesPerView: 4,
           spaceBetween: 40,
         },
