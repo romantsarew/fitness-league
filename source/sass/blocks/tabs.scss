@@ -98,6 +98,7 @@
     color: $color-default-white;
     padding: 26px 43px;
     outline: none;
+    border: none;
   }
 
   & h3 {
@@ -169,7 +170,11 @@
 
     &:active {
       @include active;
+      @include hover-focus;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
       color: rgba(255, 255, 255, 0.7);
+      padding: 26px 43px;
+      border: none;
     }
   }
 }

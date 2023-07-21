@@ -2634,6 +2634,7 @@ button,
   color: #ffffff;
   padding: 26px 43px;
   outline: none;
+  border: none;
 }
 .tabs__element-item h3 {
   font-size: 26px;
@@ -2699,7 +2700,10 @@ button,
   outline: none;
 }
 .tabs__element-item a:active {
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: rgba(255, 255, 255, 0.7);
+  padding: 26px 43px;
+  border: none;
 }
 .tabs--unset .tabs__content {
   height: 100px;
@@ -4472,6 +4476,7 @@ button,
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+  z-index: 1;
 }
 
 .opinions__slider-button {
