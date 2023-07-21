@@ -1505,9 +1505,10 @@ button,
   outline: 2px solid #ffffff;
   outline-offset: 5px;
 }
-.header__logo:focus {
+.header__logo:focus-visible {
   background-color: #ffffff;
   color: #103aae;
+  outline: none;
 }
 .header__logo:active {
   background-color: #ffffff;
@@ -1527,9 +1528,10 @@ button,
   outline: 2px solid #ffffff;
   outline-offset: 5px;
 }
-.header__contact:focus {
+.header__contact:focus-visible {
   background-color: #ffffff;
   color: #103aae;
+  outline: none;
 }
 .header__contact:active {
   background-color: #ffffff;
@@ -1986,10 +1988,12 @@ button,
   top: -3px;
   left: 0;
 }
-.footer__nav-social-link:hover svg, .footer__nav-social-link:focus svg, .footer__nav-social-link:active svg {
+.footer__nav-social-link:hover svg, .footer__nav-social-link:focus-visible svg, .footer__nav-social-link:active svg {
   color: #ffffff;
+  outline: none;
 }
-.footer__nav-social-link:hover::before, .footer__nav-social-link:focus::before {
+.footer__nav-social-link:hover::before, .footer__nav-social-link:focus-visible::before {
+  outline: none;
   background-color: #103aae;
 }
 .footer__nav-social-link:active::before {
@@ -2564,9 +2568,10 @@ button,
   pointer-events: none;
   border-bottom: 2px solid #d10a42;
 }
-.tabs__control:hover, .tabs__control:focus {
+.tabs__control:hover, .tabs__control:focus-visible {
   color: #102654;
   border-bottom: 2px solid #d10a42;
+  outline: none;
 }
 .tabs__control:active {
   color: #102654;
@@ -2619,16 +2624,16 @@ button,
   background-color: #ffffff;
   border: 7px solid transparent;
 }
-.tabs__element-item:hover, .tabs__element-item:focus {
+.tabs__element-item:hover, .tabs__element-item:focus-visible {
   border: 7px solid transparent;
   -o-border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
      border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
 }
-.tabs__element-item:hover a, .tabs__element-item:focus a {
+.tabs__element-item:hover a, .tabs__element-item:focus-visible a {
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: #ffffff;
-  border: none;
   padding: 26px 43px;
+  outline: none;
 }
 .tabs__element-item h3 {
   font-size: 26px;
@@ -2686,11 +2691,12 @@ button,
   text-align: center;
   width: 100%;
 }
-.tabs__element-item a:hover, .tabs__element-item a:focus {
+.tabs__element-item a:hover, .tabs__element-item a:focus-visible {
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: #ffffff;
   border: none;
   padding: 26px 43px;
+  outline: none;
 }
 .tabs__element-item a:active {
   color: rgba(255, 255, 255, 0.7);
@@ -2903,9 +2909,10 @@ button,
           user-select: none;
   text-align: center;
 }
-.competition__link:hover, .competition__link:focus {
+.competition__link:hover, .competition__link:focus-visible {
   background-color: #ffffff;
   color: #103aae;
+  outline: none;
 }
 .competition__link:active {
   background-color: #ffffff;
@@ -3049,10 +3056,10 @@ button,
   border-radius: 50%;
   cursor: pointer;
 }
-.trainers__button:hover, .trainers__button:focus {
+.trainers__button:hover, .trainers__button:focus-visible {
   outline: 1px solid #102654;
 }
-.trainers__button:hover svg, .trainers__button:focus svg {
+.trainers__button:hover svg, .trainers__button:focus-visible svg {
   color: #102654;
 }
 .trainers__button:active {

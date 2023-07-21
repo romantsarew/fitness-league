@@ -124,16 +124,18 @@
   }
 
   &:hover svg,
-  &:focus svg,
+  &:focus-visible svg,
   &:active svg {
     @include hover-focus;
     @include active;
     color: #ffffff;
+    outline: none;
   }
 
   &:hover::before,
-  &:focus::before {
+  &:focus-visible::before {
     @include hover-focus;
+    outline: none;
     background-color: #103aae;
   }
 

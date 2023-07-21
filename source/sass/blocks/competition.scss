@@ -98,10 +98,11 @@
   text-align: center;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @include hover-focus;
     background-color: #ffffff;
     color: #103aae;
+    outline: none;
   }
 
   &:active {

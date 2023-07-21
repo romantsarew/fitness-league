@@ -27,13 +27,13 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     @include hover-focus;
     outline: 1px solid #102654;
   }
 
   &:hover svg,
-  &:focus svg {
+  &:focus-visible svg {
     @include hover-focus;
     color: #102654;
   }
