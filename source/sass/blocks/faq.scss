@@ -95,7 +95,7 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  padding: 25px 0 23px;
+  padding: 25px 0 22px;
   border-top: 1px solid rgba(28, 51, 116, 0.2);
   min-height: 92px;
 
@@ -135,34 +135,99 @@
   background-color: transparent;
 
   &.is-closed {
-    background-image: url("../img/svg/accordion-plus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 1px;
+      border: 1px solid #102654;
+      left: 12px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 18px;
+      border: 1px solid #102654;
+      top: 12px;
+    }
 
     &:hover {
       @include hover;
       background-color: #102654;
-      background-image: url("../img/svg/accordion-plus-white.svg");
+    }
+
+    &:hover::before {
+      @include hover;
+      border-color: $color-default-white;
+    }
+
+    &:hover::after {
+      @include hover;
+      border-color: $color-default-white;
     }
 
     &:focus {
       @include focus;
       background-color: #102654;
-      background-image: url("../img/svg/accordion-plus-white.svg");
+    }
+
+    &:focus::before {
+      @include hover;
+      border-color: $color-default-white;
+    }
+
+    &:focus::after {
+      @include hover;
+      border-color: $color-default-white;
     }
 
     &:active {
       @include active;
       background-color: #102654;
-      background-image: url("../img/svg/accordion-plus-white.svg");
+    }
+
+    &:active::before {
+      @include active;
+      display: none;
+    }
+
+    &:active::after {
+      @include active;
+      border-color: $color-default-white;
     }
   }
 
   &.is-opened {
-    background-image: url("../img/svg/accordion-minus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #102654;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 1px;
+      border: 1px solid #102654;
+      left: 12px;
+    }
+
+    &:hover {
+      @include hover;
+      background-color: #102654;
+    }
+
+    &:hover::before {
+      @include hover;
+      border-color: $color-default-white;
+    }
+
+    &:focus {
+      @include focus;
+      background-color: #102654;
+    }
+
+    &:focus::before {
+      @include hover;
+      border-color: $color-default-white;
+    }
   }
 
   &:disabled {
@@ -301,7 +366,7 @@
   .faq__element-button {
     width: 32px;
     height: 32px;
-    top: 36px;
+    top: 34px;
 
     &.is-closed {
       background-size: 12px 12px;
@@ -319,8 +384,20 @@
       }
     }
 
-    &.is-opened {
-      background-size: 12px 1px;
+    &.is-closed::before {
+      height: 12px;
+      top: 10px;
+    }
+
+
+    &.is-closed::after {
+      width: 12px;
+      left: 10px;
+    }
+
+    &.is-opened::before {
+      width: 12px;
+      left: 9px;
     }
   }
 }
