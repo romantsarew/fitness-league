@@ -175,7 +175,7 @@
 
 @media screen and (max-width: $tablet-width) {
   .promotions__container {
-    padding: 94px 25px 100px;
+    padding: 91px 25px 100px;
     gap: 40px;
   }
 
@@ -264,6 +264,7 @@
   }
 
   .promotions__list {
+    display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -271,7 +272,7 @@
   .promotions__item {
     align-items: center;
     text-align: center;
-    padding: 35px 42px 38px;
+    padding: 33px 42px 38px;
     min-width: 100%;
     max-width: 100%;
 

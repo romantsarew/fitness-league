@@ -21,7 +21,6 @@
 }
 
 .advantages__list {
-  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
@@ -96,7 +95,7 @@
 .advantages__item--comfort {
   grid-area: comfort;
   border-top: 2px solid rgba(209, 10, 66, 0.2);
-  padding-top: 75px;
+  padding-top: 76px;
 }
 
 .advantages__item--weights {
@@ -139,13 +138,13 @@
 
 .advantages__item--trainers {
   grid-area: trainers;
-  padding-top: 75px;
+  padding-top: 76px;
   border-top: 2px solid rgba(209, 10, 66, 0.2);
 }
 
 @media screen and (max-width: $tablet-width) {
   .advantages__container {
-    padding: 92px 25px;
+    padding: 94px 25px;
     display: flex;
     flex-direction: column;
     gap: 43px;

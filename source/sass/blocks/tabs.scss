@@ -10,7 +10,7 @@
   position: relative;
   flex-wrap: wrap;
   gap: 46px;
-  max-width: 350px;
+  max-width: 100%;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   margin: 0;
   margin-bottom: 35px;
@@ -194,7 +194,6 @@
     display: flex;
     position: relative;
     gap: 54px;
-    max-width: 350px;
     margin-bottom: 44px;
     border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   }
@@ -219,7 +218,6 @@
 @media screen and (max-width: $mobile-width) {
   .tabs__controls {
     gap: 45px;
-    max-width: 100%;
     margin-bottom: 34px;
     border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   }
