@@ -1988,11 +1988,14 @@ button,
   top: -3px;
   left: 0;
 }
-.footer__nav-social-link:hover svg, .footer__nav-social-link:focus-visible svg, .footer__nav-social-link:active svg {
+.footer__nav-social-link:hover svg, .footer__nav-social-link:focus svg, .footer__nav-social-link:active svg {
   color: #ffffff;
   outline: none;
 }
-.footer__nav-social-link:hover::before, .footer__nav-social-link:focus-visible::before {
+.footer__nav-social-link:focus-visible {
+  outline: none;
+}
+.footer__nav-social-link:hover::before, .footer__nav-social-link:focus::before {
   outline: none;
   background-color: #103aae;
 }
@@ -2142,12 +2145,15 @@ button,
   }
 }
 .about__container {
-  padding: 120px 83px 235px 143px;
+  padding: 120px 0 235px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 85px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about__text-container {
@@ -2155,6 +2161,7 @@ button,
   color: #102654;
   margin-top: 39px;
   min-width: 355px;
+  margin-left: 57px;
 }
 
 .about__title {
@@ -2200,7 +2207,10 @@ button,
   width: 364px;
   min-height: 228px;
   top: 408px;
-  left: 520px;
+  left: 54%;
+  -webkit-transform: translate(-54%, 0);
+      -ms-transform: translate(-54%, 0);
+          transform: translate(-54%, 0);
   cursor: pointer;
 }
 .about__video iframe {
@@ -2282,8 +2292,8 @@ button,
   border-radius: 50%;
   z-index: 0;
 }
-.about__video-button:hover, .about__video-button:focus {
-  outline-color: #102654;
+.about__video-button:hover, .about__video-button:not(:disabled):focus {
+  outline: 2px solid #102654;
 }
 .about__video-button:hover svg, .about__video-button:focus svg {
   fill: #102654;
@@ -2739,7 +2749,7 @@ button,
   .tabs__element-item {
     width: 442px;
     min-height: 448px;
-    padding: 56px 111px 61px;
+    padding: 56px 111px 59px;
     background-color: #ffffff;
   }
 }
@@ -2792,7 +2802,7 @@ button,
   }
 }
 .competition__container {
-  padding: 123px 83px 53px;
+  padding: 120px 83px 53px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2930,7 +2940,7 @@ button,
 
 @media screen and (max-width: 1199px) {
   .competition__container {
-    padding: 100px 25px 50px;
+    padding: 99px 25px 50px;
   }
   .competition__text-container {
     padding: 50px 45px 51px;
@@ -3192,15 +3202,15 @@ button,
 .swiper__slide-container img {
   -o-object-fit: cover;
      object-fit: cover;
-  min-height: 100%;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .swiper__slide-picture {
   position: relative;
   background-color: #9aa2b3;
-  min-width: 260px;
-  min-height: 294px;
+  min-width: 100%;
+  min-height: 100%;
 }
 .swiper__slide-picture p {
   color: #ffffff;
@@ -3294,6 +3304,7 @@ button,
     -o-object-fit: cover;
        object-fit: cover;
     min-height: 294px;
+    width: 100%;
   }
   .swiper__slide-picture p {
     bottom: 30px;
@@ -3349,7 +3360,7 @@ button,
 }
 
 .advantages__container {
-  padding: 108px 143px 122px;
+  padding: 108px 0 122px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3385,6 +3396,7 @@ button,
      -moz-column-gap: 60px;
           column-gap: 60px;
   list-style-type: none;
+  margin: 0 auto;
 }
 
 .advantages__item {
@@ -4014,11 +4026,13 @@ button,
     width: 100%;
   }
   .promotions__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 324px 324px;
+    grid-template-columns: 324px 324px;
     gap: 30px;
+    max-width: 768px;
+    margin: 0 auto;
   }
   .promotions__item {
     min-width: 324px;
@@ -4075,7 +4089,7 @@ button,
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    padding: 35px 43px 38px;
+    padding: 35px 42px 38px;
     min-width: 100%;
     max-width: 100%;
   }
@@ -4322,7 +4336,7 @@ button,
     margin: 0;
     font-size: 18px;
     line-height: 25px;
-    max-width: 550px;
+    max-width: 100%;
     margin-top: 6px;
   }
 }
@@ -4364,7 +4378,7 @@ button,
   }
   .faq__element-item {
     width: 100%;
-    padding: 20px 0 19px;
+    padding: 19px 0 19px;
     min-height: 84px;
   }
   .faq__element-item:last-child h3 {

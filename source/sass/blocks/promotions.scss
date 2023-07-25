@@ -207,8 +207,11 @@
   }
 
   .promotions__list {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 324px 324px;
     gap: 30px;
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .promotions__item {
@@ -268,7 +271,7 @@
   .promotions__item {
     align-items: center;
     text-align: center;
-    padding: 35px 43px 38px;
+    padding: 35px 42px 38px;
     min-width: 100%;
     max-width: 100%;
 

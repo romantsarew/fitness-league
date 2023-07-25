@@ -3,7 +3,7 @@
 }
 
 .advantages__container {
-  padding: 108px 143px 122px;
+  padding: 108px 0 122px;
   display: flex;
   flex-direction: column;
   gap: 49px;
@@ -31,6 +31,7 @@
     "comfort weights trainers";
   column-gap: 60px;
   list-style-type: none;
+  margin: 0 auto;
 }
 
 .advantages__item {

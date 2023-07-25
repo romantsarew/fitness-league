@@ -1,8 +1,9 @@
 .about__container {
-  padding: 120px 83px 235px 143px;
+  padding: 120px 0 235px;
   position: relative;
   display: flex;
   gap: 85px;
+  justify-content: center;
 }
 
 .about__text-container {
@@ -10,6 +11,7 @@
   color: #102654;
   margin-top: 39px;
   min-width: 355px;
+  margin-left: 57px;
 }
 
 .about__title {
@@ -52,7 +54,8 @@
   width: 364px;
   min-height: 228px;
   top: 408px;
-  left: 520px;
+  left: 54%;
+  transform: translate(-54%, 0);
   cursor: pointer;
 
   & iframe {
@@ -155,9 +158,9 @@
   }
 
   &:hover,
-  &:focus {
+  &:not(:disabled):focus {
     @include hover-focus;
-    outline-color: #102654;
+    outline: 2px solid #102654;
   }
 
   &:hover svg,

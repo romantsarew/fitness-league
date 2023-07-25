@@ -226,7 +226,7 @@
       margin: 0;
       font-size: 18px;
       line-height: 25px;
-      max-width: 550px;
+      max-width: 100%;
       margin-top: 6px;
     }
   }
@@ -270,7 +270,7 @@
 
   .faq__element-item {
     width: 100%;
-    padding: 20px 0 19px;
+    padding: 19px 0 19px;
     min-height: 84px;
 
     &:last-child {
